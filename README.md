@@ -2,53 +2,50 @@
 
 ## Tech Stack
 
-- NodeJs v20.9.0
+- Node.js v20.9.0
 - Express
-- Typeorm
+- TypeORM
 
-## Structure
+## Project Structure
 
-`/controller` - controller layer
-`/entity` - entity layer
-`/service` - service layer
-`/repository` - repository layer
-`/migration` - database migration files
+- `/controller` - Controller layer
+- `/entity` - Entity layer
+- `/service` - Service layer
+- `/repository` - Repository layer
+- `/migration` - Database migration files
 
 ## Tasks
 
 ### 0. Setup
 1. Run `npm install` to install package dependencies.
 2. Run `npm run start:services` to start database services.
-3. Run `npm run db:migration:run` to run typeorm database migration.
+3. Run `npm run db:migration:run` to execute TypeORM database migration.
 
-### 1. Create Order entity
+### 1. Create Order Entity
 
-Create `src/entity/order.ts` entity to represent an order.
-Refer to typeorm [docs](https://typeorm.io/relations) to implement this entity. A migration will be required to create the table, use [these docs](https://typeorm.io/migrations) as a reference.
+Create the `src/entity/order.ts` entity to represent an order. Refer to the TypeORM [docs](https://typeorm.io/relations) to implement this entity. A migration will be required to create the table; use [these docs](https://typeorm.io/migrations) as a reference.
 
-### 2. Implement order creation endpoint
+### 2. Implement Order Creation Endpoint
 
-Modify `src/controller/customer.ts` controller to implement the order creation endpoint for a specific user.
+Modify the `src/controller/customer.ts` controller to implement the order creation endpoint for a specific user.
 
-### 3. Modify getCustomer method to return orders
+### 3. Modify getCustomer Method to Return Orders
 
-Modify `src/controller/customer.ts` controller method getCustomer to return orders for a specific user.
-Make use of typeorm [relations](https://typeorm.io/relations).
+Modify the `src/controller/customer.ts` controller method `getCustomer` to return orders for a specific user. Make use of TypeORM [relations](https://typeorm.io/relations).
 
-### 3. Let's validate our user input!
+### 4. Validate User Input
 
-Modify `src/controller/customer.ts` controller method createOrder to validate the input.
-Make use of express-validator [docs](https://express-validator.github.io/docs/) or any other tool that you're comfortable with!
+Modify the `src/controller/customer.ts` controller method `createOrder` to validate the input. 
+Utilize Express-validator [docs](https://express-validator.github.io/docs/) or any other tool you're comfortable with.
 
-### 4. Let's add some tests!
+### 5. Add Tests
 
-We have a working test in `src/controller/__tests__/customer.spec.js`. Write some tests for newly added functionality! 
+There is a working test in `src/controller/__tests__/customer.spec.js`. Write tests for newly added functionality!
 
-### 5. Dockerize the application (optional)
+### 6. Dockerize the Application (Optional)
 
-Create a Dockerfile to dockerize the application.
+Create a Dockerfile to containerize the application.
 
-### 6. Want to show your knowledge? Add suggestions/refactor existing code
+### 7. Showcase Your Knowledge: Suggestions and Refactoring
 
-Hopefully this task was pretty easy, but no project is ever finished. Provide any insights how you would refactor/clean up
-or improve this project in any way you can think of. Code doesn't need to work - just show your ideas!
+While the tasks are comprehensive, take the opportunity to showcase your expertise. Provide insights on how you would refactor, clean up, or improve this project. The code doesn't need to be functional, but demonstrate your ideas!
