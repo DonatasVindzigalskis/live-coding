@@ -24,7 +24,7 @@
 ### 1. Create Order Entity
 
 Create the `src/entity/order.ts` entity to represent an order. Refer to the TypeORM [docs](https://typeorm.io/relations) to implement this entity. A migration will be required to create the table; use [these docs](https://typeorm.io/migrations) as a reference.
-The entity should have the following fields: `id, amount_total, customer_id`. 
+The entity should have the following fields: `id, amount_total, created_at, customer_id`. 
 
 ### 2. Implement Order Creation Endpoint
 
@@ -39,11 +39,12 @@ Modify the `src/controller/customer.ts` controller method `getCustomer` to retur
   "first_name": "string",
   "last_name": "string",
   "age": 30,
-  "order_total_amount": 150.0,
+  "order_total_amount": 150,
   "orders": [
     {
         "id": "string",
-        "amount_total": 50.0
+        "created_at": "2023-01-01T01:00:00",
+        "amount_total": 50
     },
     ...
   ]
