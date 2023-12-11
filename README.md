@@ -18,8 +18,9 @@
 
 ### 0. Setup
 1. Run `npm install` to install package dependencies.
-2. Run `npm run start:services` to start database services.
-3. Run `npm run db:migration:run` to execute TypeORM database migration.
+2. Create `.env` file from `.env.example` template
+3. Run `npm run start:services` to start database services.
+4. Run `npm run db:migration:run` to execute TypeORM database migration.
 
 ### 1. Create Order Entity
 
