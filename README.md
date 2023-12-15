@@ -19,12 +19,13 @@
 ### 0. Setup
 1. Run `npm install` to install package dependencies.
 2. Run `npm run start:services` to start database services.
-3. Run `npm run db:migration:run` to execute TypeORM database migration.
 
 ### 1. Create Order Entity
 
 Create the `src/entity/order.ts` entity to represent an order. Refer to the TypeORM [docs](https://typeorm.io/relations) to implement this entity. A migration will be required to create the table; use [these docs](https://typeorm.io/migrations) as a reference.
+Existing migration template is created so update the script in `src/migration/1701760316938-AddOrderTable.ts`.
 The entity should have the following fields: `id, amount_total, created_at, customer_id`. 
+After migration is created, run `npm run migration:run` to execute the migrations.
 
 ### 2. Implement Order Creation Endpoint
 

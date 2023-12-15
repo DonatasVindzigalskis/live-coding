@@ -2,6 +2,7 @@ import 'reflect-metadata'
 import 'dotenv/config'
 import { DataSource } from 'typeorm'
 import { Customer } from './entity/customer'
+import { Order } from './entity/order'
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
@@ -12,6 +13,6 @@ export const AppDataSource = new DataSource({
   database: 'hostinger-interview',
   synchronize: false,
   logging: false,
-  entities: [Customer],
+  entities: [Customer, Order],
   migrations: ['src/migration/*.ts']
 })
