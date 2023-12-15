@@ -18,7 +18,8 @@
 
 ### 0. Setup
 1. Run `npm install` to install package dependencies.
-2. Run `npm run start:services` to start database services.
+2. Create `.env` file from `.env.example` template
+3. Run `npm run start:services` to start database services.
 
 ### 1. Create Order Entity
 
